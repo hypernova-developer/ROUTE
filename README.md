@@ -13,3 +13,13 @@ Run the executable with a target configuration to initiate the automated remote 
 ```bash
 ./route 10.0.0.15
 ```
+
+# Architecture & Style Note
+
+## Architectural Blueprint
+ROUTE separates its remote abstraction logic using strict execution pipelines via the `route` namespace. Targets are registered inside an isolated vector structure, and commands are dispatched asynchronously. System state, latency metrics, and payload returns are captured by a fast logging coordinator without blocking the primary network stream.
+
+## Code Style Manifesto
+- **Bracket Realization:** Built completely using explicit Allman-style alignment for maximum scannability.
+- **Namespace Realization:** All structures are locked inside the localized `route` namespace.
+- **Encapsulation Density:** Components maintain atomic state managers, keeping performance overhead at absolute zero.
