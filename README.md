@@ -23,3 +23,6 @@ ROUTE separates its remote abstraction logic using strict execution pipelines vi
 - **Bracket Realization:** Built completely using explicit Allman-style alignment for maximum scannability.
 - **Namespace Realization:** All structures are locked inside the localized `route` namespace.
 - **Encapsulation Density:** Components maintain atomic state managers, keeping performance overhead at absolute zero.
+
+## Licensing
+- This project is licensed under **GNU GPL v3.0 License**. All rights reserved by **hypernova-developer**.
